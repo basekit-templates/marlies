@@ -1,0 +1,146 @@
+{
+    "name":"Marlies",
+    "thumbnail":"marlies.png",
+    "screenshot":"marlies.png",
+    "tags": {
+    "en": ["minimal", "clean", "photography", "vintage", "modern", "dark", "studio", "website", "creative", "elegant", "professional", "unique", "media", "sans-serif"],
+    "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
+    "br": ["minimalista", "limpo", "fotografia", "vintage", "moderno", "escuro", "estúdio", "website", "criativo", "elegante", "profissional", "único", "mídia", "sans-serif"]
+    },
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#222222",
+            "color3":"#c0060d",
+            "color4":"#222222",
+            "color5":"#222222",
+            "color6":"#222222",
+            "color7":"#f1f1f1"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#11234a",
+            "color3":"#f3a41c",
+            "color4":"#11234a",
+            "color5":"#11234a",
+            "color6":"#11234a",
+            "color7":"#ffffff"
+        },
+        "Swatch 3": {
+            "color1":"#f0f2e6",
+            "color2":"#929483",
+            "color3":"#90a592",
+            "color4":"#38424a",
+            "color5":"#38424a",
+            "color6":"#38424a",
+            "color7":"#ced0c2"
+        },
+        "Swatch 4": {
+            "color1":"#d4d7d2",
+            "color2":"#2F343B",
+            "color3":"#703030",
+            "color4":"#2F343B",
+            "color5":"#2F343B",
+            "color6":"#434f5b",
+            "color7":"#dfe2de"
+        },
+        "Swatch 5": {
+            "color1":"#262a29",
+            "color2":"#161818",
+            "color3":"#D9CB9E",
+            "color4":"#FFFFFF",
+            "color5":"#FFFFFF",
+            "color6":"#FFFFFF",
+            "color7":"#363b3a"
+        }
+    },
+    "fontSwatch": {
+       "title": "Futura",
+        "font1": {
+            "font-family": "Futura",
+            "font-size": "28px",
+            "font-weight": "400",
+            "line-height": "32px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "Futura",
+            "font-size": "24px",
+            "font-weight": "400",
+            "line-height": "34px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "Lobster",
+            "font-size": "24px",
+            "font-weight": "600",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "Futura",
+            "font-size": "16px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "Oswald",
+            "font-size": "17px",
+            "font-weight": "300",
+            "line-height": "24px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "Futura",
+            "font-size": "16px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch6",
+            "color-hover": "@color-swatch3",
+            "letter-spacing": "inherit",
+            "background-color": "transparent",
+            "background-color-hover": "transparent"
+        },
+        "font7": {
+            "font-family": "Futura",
+            "font-size": "18px",
+            "font-weight": "300",
+            "line-height": "28px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,5%)"
+        },
+        "font8": {
+            "font-family": "Courier New",
+            "font-size": "18px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "Courier New",
+            "font-size": "18px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "Futura",
+            "font-size": "36px",
+            "font-weight": "500",
+            "line-height": "40px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        }
+    }
+}
