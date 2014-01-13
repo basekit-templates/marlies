@@ -58,7 +58,7 @@
     "fontSwatch": {
        "title": "Futura",
         "font1": {
-            "font-family": "Futura",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
             "font-size": "28px",
             "font-weight": "400",
             "line-height": "32px",
@@ -66,7 +66,7 @@
             "letter-spacing": "inherit"
         },
         "font2": {
-            "font-family": "Futura",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
             "font-size": "24px",
             "font-weight": "400",
             "line-height": "34px",
@@ -74,7 +74,7 @@
             "letter-spacing": "inherit"
         },
         "font3": {
-            "font-family": "Lobster",
+            "font-family": "\"Lobster\", Verdana, sans-serif",
             "font-size": "24px",
             "font-weight": "600",
             "line-height": "28px",
@@ -82,7 +82,7 @@
             "letter-spacing": "inherit"
         },
         "font4": {
-            "font-family": "Futura",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "26px",
@@ -90,7 +90,7 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "Oswald",
+            "font-family": "\"Oswald\", Arial, sans-serif",
             "font-size": "17px",
             "font-weight": "300",
             "line-height": "24px",
@@ -98,7 +98,7 @@
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "Futura",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "26px",
@@ -109,7 +109,7 @@
             "background-color-hover": "transparent"
         },
         "font7": {
-            "font-family": "Futura",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
             "font-size": "18px",
             "font-weight": "300",
             "line-height": "28px",
@@ -119,15 +119,15 @@
             "background-color-hover": "darken(@color-swatch3,5%)"
         },
         "font8": {
-            "font-family": "Courier New",
+            "font-family": "\"Oswald\", Arial, sans-serif",
             "font-size": "18px",
-            "font-weight": "400",
-            "line-height": "28px",
+            "font-weight": "4ß00",
+            "line-height": "24px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
         "font9": {
-            "font-family": "Courier New",
+            "font-family": "\"Courier New\", monospace",
             "font-size": "18px",
             "font-weight": "400",
             "line-height": "28px",
@@ -135,7 +135,7 @@
             "letter-spacing": "inherit"
         },
         "font10": {
-            "font-family": "Futura",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
             "font-size": "36px",
             "font-weight": "500",
             "line-height": "40px",
