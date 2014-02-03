@@ -20,6 +20,11 @@ body {
   padding: 0;
 }
 
+.wrapper {
+    margin: 0 5%;
+    width: 90%;
+}
+
 /* ===============================
    2. Media Queries
    =============================== */
@@ -125,6 +130,9 @@ header {
 .widget {
     &.menusections {
         text-align: center;
+        @media @tablet {
+            margin: 0 auto 1em;
+        }
         ul {
             display: inline-block;
             list-style: none;
@@ -180,6 +188,7 @@ header {
                 position: absolute;
                 width: 100%;
                 border-bottom: 1px dotted @color-swatch5;
+                top: 0;
                 &:after {
                     content:"";
                     background: image('/images/nav-icon.png') no-repeat;
