@@ -143,10 +143,10 @@ header {
                 padding: 0 12px;
                 float: left;
                 @media @tablet {
-                        width: 100%;
-                        padding: 1em 0;
-                        margin: 0;
-                        border-bottom: 1px dotted @color-swatch6;
+                    width: 100%;
+                    padding: 1em 0;
+                    margin: 0;
+                    border-bottom: 1px dotted @color-swatch6;
                 }
                 a {
                     display: block;
@@ -174,32 +174,30 @@ header {
                 }
             }
         }
-        a {
-            &.menu-pull {
-                display: none;
-                @media @tablet {
-                    display: block;
+        a.menu-pull {
+            display: none;
+            @media @tablet {
+                display: block;
+                position: absolute;
+                width: 100%;
+                border-bottom: 1px dotted @color-swatch5;
+                &:after {
+                    content:"";
+                    background: image('/images/nav-icon.png') no-repeat;
+                    background-position: center;
+                    width: 50px;
+                    height: 50px;
+                    top: -28px;
+                    right: 0;
+                    left: 0;
+                    margin: 0 auto;
+                    background-color: @color-swatch5;
+                    display: inline-block;
                     position: absolute;
-                    width: 100%;
-                    border-bottom: 1px dotted @color-swatch5;
-                    &:after {
-                        content:"";
-                        background: image('/images/nav-icon.png') no-repeat;
-                        background-position: center;
-                        width: 50px;
-                        height: 50px;
-                        top: -28px;
-                        right: 0;
-                        left: 0;
-                        margin: 0 auto;
-                        background-color: @color-swatch5;
-                        display: inline-block;
-                        position: absolute;
-                        border: none;
-                        -webkit-border-radius: 100px;
-                        -moz-border-radius: 100px;
-                        border-radius: 100px;
-                    }
+                    border: none;
+                    -webkit-border-radius: 100px;
+                    -moz-border-radius: 100px;
+                    border-radius: 100px;
                 }
             }
         }
@@ -468,7 +466,7 @@ header {
                                     top: -2px;
                                 }  
                             }
-                            .nutFree-icon {
+                            .nutfree-icon {
                                 &:before {
                                     content: "nf";
                                 }  
@@ -478,12 +476,12 @@ header {
                                     content: "v";
                                 }
                             }
-                            .glutenFree-icon {
+                            .glutenfree-icon {
                                 &:before {
                                     content: "gf";
                                 }
                             }
-                            .dairyFree-icon {
+                            .dairyfree-icon {
                                 &:before {
                                     content: "df";
                                 }
