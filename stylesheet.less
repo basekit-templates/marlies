@@ -354,18 +354,12 @@ header {
              }
             
             li {    /* menu-item and menu-section-item */
-                -webkit-column-break-inside: avoid;
-                -moz-column-break-inside: avoid;
-                -ms-column-break-inside: avoid;
-                -o-column-break-inside: avoid;
                 position: relative;
                 display: block;
-                padding-bottom: 1.5em;
-                margin-bottom: 1em;
 
-                @media @mobile { 
-                    margin-bottom: 1.5em;
-                    padding-bottom: 1.5em;
+                @media @tablet { 
+                    margin-bottom: 2em;
+                    padding-bottom: 0;
                 }
 
                     &.menu-section ol {
@@ -459,7 +453,7 @@ header {
                                 width: auto;
                                 height: 22px;
                                 border: 0;
-                                padding: 0 5px;
+                                padding: 0 8px;
                                 margin: 10px 5px 0 0;
                                 -webkit-border-radius: 100px;
                                 -moz-border-radius: 100px;
@@ -483,6 +477,13 @@ header {
                             .vegetarian-icon {
                                 &:before {
                                     content: "v";
+                                }
+                            }
+                            .vegan-icon {
+                                &:before {
+                                    content: "vegan";
+                                    position: relative;
+                                    top: -2px;
                                 }
                             }
                             .glutenfree-icon {
