@@ -46,19 +46,19 @@
             "color7":"#dfe2de"
         },
         "Swatch 5": {
-            "color1":"#262a29",
-            "color2":"#161818",
-            "color3":"#D9CB9E",
-            "color4":"#FFFFFF",
-            "color5":"#FFFFFF",
-            "color6":"#FFFFFF",
-            "color7":"#363b3a"
+            "color1":"#ffffff",
+            "color2":"#777470",
+            "color3":"#ccedfa",
+            "color4":"#2F343B",
+            "color5":"#777470",
+            "color6":"#777470",
+            "color7":"#42413f"
         }
     },
     "fontSwatch": {
        "title": "Futura",
         "font1": {
-            "font-family": "\"Futura\", Helvetica, sans-serif",
+            "font-family": "\"Oswald\", Arial, sans-serif",
             "font-size": "28px",
             "font-weight": "400",
             "line-height": "32px",
@@ -135,7 +135,7 @@
             "letter-spacing": "inherit"
         },
         "font10": {
-            "font-family": "\"Futura\", Helvetica, sans-serif",
+            "font-family": "\"Oswald\", Arial, sans-serif",
             "font-size": "36px",
             "font-weight": "500",
             "line-height": "40px",

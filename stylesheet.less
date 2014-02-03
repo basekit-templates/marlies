@@ -123,81 +123,83 @@ header {
    4. Menu Navigation
    =============================== */
 
-.widget.menusections {
-    text-align: center;
-    ul {
-        display: inline-block;
-        list-style: none;
-        margin-bottom: 0;
-        padding-left: 0;
-        @media @tablet {
-            /* Hidden until nav icon is clicked */
-            display: none;
-            /* Then these styles are applied */
-            width: 100%;
-            margin: 30px 0;
-            background-color: @color-swatch1;
-        }
-        li {
-            padding: 0 12px;
-            float: left;
+.widget {
+    &.menusections {
+        text-align: center;
+        ul {
+            display: inline-block;
+            list-style: none;
+            margin-bottom: 0;
+            padding-left: 0;
             @media @tablet {
-                    width: 100%;
-                    padding: 1em 0;
-                    margin: 0;
-                    border-bottom: 1px dotted @color-swatch6;
-            }
-            a {
-                display: block;
-                font-family:@font-swatch6-font-family;
-                font-size:@font-swatch6-font-size;
-                font-weight: @font-swatch6-font-weight;
-                color: @font-swatch6-color;
-                line-height:@font-swatch6-line-height;
-                letter-spacing: @font-swatch6-letter-spacing;
-                text-decoration: underline;
-                &:hover {
-                    color: @font-swatch6-color-hover;
-                    text-decoration: none;
-                }
-                &:after {
-                    font-size: 0.8em;
-                    padding-left: 8px;
-                    position: absolute;
-                    bottom: 0.4em;
-                    color: @color-swatch5;
-                }
-            }
-            &:last-child a:after {
-                content: "";
-            }
-        }
-    }
-    a {
-        &.menu-pull {
-            display: none;
-            @media @tablet {
-                display: block;
-                position: absolute;
+                /* Hidden until nav icon is clicked */
+                display: none;
+                /* Then these styles are applied */
                 width: 100%;
-                border-bottom: 1px dotted @color-swatch5;
-                &:after {
-                    content:"";
-                    background: image('/images/nav-icon.png') no-repeat;
-                    background-position: center;
-                    width: 50px;
-                    height: 50px;
-                    top: -28px;
-                    right: 0;
-                    left: 0;
-                    margin: 0 auto;
-                    background-color: @color-swatch5;
-                    display: inline-block;
+                margin: 30px 0;
+                background-color: @color-swatch1;
+            }
+            li {
+                padding: 0 12px;
+                float: left;
+                @media @tablet {
+                        width: 100%;
+                        padding: 1em 0;
+                        margin: 0;
+                        border-bottom: 1px dotted @color-swatch6;
+                }
+                a {
+                    display: block;
+                    font-family:@font-swatch6-font-family;
+                    font-size:@font-swatch6-font-size;
+                    font-weight: @font-swatch6-font-weight;
+                    color: @font-swatch6-color;
+                    line-height:@font-swatch6-line-height;
+                    letter-spacing: @font-swatch6-letter-spacing;
+                    text-decoration: underline;
+                    &:hover {
+                        color: @font-swatch6-color-hover;
+                        text-decoration: none;
+                    }
+                    &:after {
+                        font-size: 0.8em;
+                        padding-left: 8px;
+                        position: absolute;
+                        bottom: 0.4em;
+                        color: @color-swatch5;
+                    }
+                }
+                &:last-child a:after {
+                    content: "";
+                }
+            }
+        }
+        a {
+            &.menu-pull {
+                display: none;
+                @media @tablet {
+                    display: block;
                     position: absolute;
-                    border: none;
-                    -webkit-border-radius: 100px;
-                    -moz-border-radius: 100px;
-                    border-radius: 100px;
+                    width: 100%;
+                    border-bottom: 1px dotted @color-swatch5;
+                    &:after {
+                        content:"";
+                        background: image('/images/nav-icon.png') no-repeat;
+                        background-position: center;
+                        width: 50px;
+                        height: 50px;
+                        top: -28px;
+                        right: 0;
+                        left: 0;
+                        margin: 0 auto;
+                        background-color: @color-swatch5;
+                        display: inline-block;
+                        position: absolute;
+                        border: none;
+                        -webkit-border-radius: 100px;
+                        -moz-border-radius: 100px;
+                        border-radius: 100px;
+                    }
                 }
             }
         }
@@ -368,7 +370,7 @@ header {
                     padding: 1.5em;
                     border: none;
                     border: 2px dotted @color-swatch4;
-                    background: @color-swatch7; 
+                    background: fade(@color-swatch7, 25%); 
 
                         h3 {
                             width: auto;
@@ -465,6 +467,26 @@ header {
                                     position: relative;
                                     top: -2px;
                                 }  
+                            }
+                            .nutFree-icon {
+                                &:before {
+                                    content: "nf";
+                                }  
+                            }
+                            .vegetarian-icon {
+                                &:before {
+                                    content: "v";
+                                }
+                            }
+                            .glutenFree-icon {
+                                &:before {
+                                    content: "gf";
+                                }
+                            }
+                            .dairyFree-icon {
+                                &:before {
+                                    content: "df";
+                                }
                             }
                             .not-spicy-icon.dietary-icon {
                                     display: none;
