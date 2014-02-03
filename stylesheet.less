@@ -2,14 +2,16 @@
 
 Table of Contents -
   1. Default
-  2. Variable Media Queries
+  2. Media Queries
   3. Header
 
 */
 
 /* ===============================
-   Default
+   1. Default
    =============================== */
+
+@import "@{templateCommon}/basekit-bootstrap.less";
 
 body {
   background-color: @color-swatch1;
@@ -18,100 +20,20 @@ body {
   padding: 0;
 }
 
-.wrapper {
-  width: 90%;
-  margin: 0 5%;
-}
-
-a {
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@color-swatch3;
-  letter-spacing: @font-swatch5-letter-spacing;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-h1, h2, h3, h4, h5, p {
-  margin: 0;
-  padding: 0 0 10px;
-}
-
-h1 {
-  font-family:@font-swatch1-font-family;
-  font-weight: @font-swatch1-font-weight;
-  color:@font-swatch1-color;
-  line-height:@font-swatch1-line-height;
-  letter-spacing: @font-swatch1-letter-spacing;
-  font-size: @font-swatch1-font-size;
-}
-
-h2 {
-  font-family:@font-swatch2-font-family;
-  font-size: @font-swatch2-font-size;
-  font-weight: @font-swatch2-font-weight;
-  line-height:@font-swatch2-line-height;
-  color: @font-swatch2-color;
-  letter-spacing: @font-swatch2-letter-spacing;
-}
-
-h3 {
-  font-family:@font-swatch3-font-family;
-  font-size:@font-swatch3-font-size;
-  font-weight: @font-swatch3-font-weight;
-  color: @font-swatch3-color;
-  line-height:@font-swatch3-line-height;
-  letter-spacing: @font-swatch3-letter-spacing;
-}
-
-h4 {
-  font-family:@font-swatch4-font-family;
-  font-size:@font-swatch4-font-size;
-  font-weight:@font-swatch4-font-weight;
-  line-height:@font-swatch4-line-height;
-  color:@font-swatch4-color;
-  letter-spacing: @font-swatch4-letter-spacing;
-}
-
-p {
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@font-swatch5-color;
-  letter-spacing: @font-swatch5-letter-spacing;
-}
-
-ol, li, ul {
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight:@font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@font-swatch5-color;
-}
-
 /* ===============================
-   VARIABLE MEDIA QUERIES
+   2. Media Queries
    =============================== */
 
 @tablet: ~"only screen and (max-width: 768px)";
-@mobile: ~"only screen and (max-width: 320px)";
-
-/* ===============================
-   CUSTOM CSS
-   =============================== */
+@mobile: ~"only screen and (max-width: 640px)";
 
 
 /* ===============================
-   HEADER
+   3. Header
    =============================== */
 
 header {
+  background-color: @color-swatch1;
     .header-img {
         display: inline-block;
         float: left;
@@ -181,21 +103,27 @@ header {
         }
     }
 
-    .companyname {
+    .widget.companyname {
         display: inline-block;
+        float: none;
         text-align: center;
         -webkit-text-stroke: 1px @color-swatch4;
         text-stroke: 0 0 0 1px @color-swatch4;
         text-shadow: 1px 2px 0px @color-swatch1, 3px 4px 0px fade(@color-swatch4, 30%);
+        a {
+            @media @tablet {
+                font-size: @font-swatch10-font-size;
+            }
+        }
     }
 
 }   /* end header */
 
 /* ===============================
-   4. MENU SECTIONS NAVIGATION
+   4. Menu Navigation
    =============================== */
 
-.menusections {
+.widget.menusections {
     text-align: center;
     ul {
         display: inline-block;
@@ -207,53 +135,18 @@ header {
             display: none;
             /* Then these styles are applied */
             width: 100%;
-            margin: 30px 0 0;
+            margin: 30px 0;
             background-color: @color-swatch1;
-            border-bottom: 1px dotted fade(@color-swatch5, 20%);
-        }
-
-        /* ALIGN CENTER */
-        &.align-center {
-            li {
-                text-align: center;
-                &:hover {
-                    li {
-                        text-align: center;
-                    }
-                }
-            }
-        }
-        /* ALIGN LEFT */
-        &.align-left {
-            li {
-                text-align: left;
-                &:hover {
-                    li {
-                        text-align: left;
-                    }
-                }
-            }
-        }
-        /* ALIGN RIGHT */
-        &.align-right {
-            li {
-                text-align: right;
-                &:hover {
-                    li {
-                        text-align: right;
-                    }
-                }
-            }
         }
         li {
-            padding: 0 12px 30px;
+            padding: 0 12px;
             float: left;
             @media @tablet {
                     width: 100%;
                     padding: 1em 0;
+                    margin: 0;
                     border-bottom: 1px dotted @color-swatch6;
             }
-
             a {
                 display: block;
                 font-family:@font-swatch6-font-family;
@@ -281,7 +174,7 @@ header {
         }
     }
     a {
-        &.pull {
+        &.menu-pull {
             display: none;
             @media @tablet {
                 display: block;
@@ -312,7 +205,7 @@ header {
 }
 
 /* ===============================
-   MENU
+   5. Menu
    =============================== */
 
 .main {
@@ -334,10 +227,15 @@ header {
             margin-top: 1em;
         }
 
+        .menu-subsection {
+            border: none;
+        }
+
         /* SECTION AND SUB-SECTION HEADERS */
 
-        .menu-header, .menu-section-header {
+        .menu-header, .menu-subsection-header {
             padding: 1.75em 0 1.250em;
+            text-align: center;
             @media @tablet {
                 padding: 1.5em 0 1em;
             }
@@ -424,8 +322,34 @@ header {
                -webkit-column-count: 1;
                -webkit-column-gap : 50px;
             }
+            > * {
+                break-inside: avoid;
+                -webkit-column-break-inside: avoid;
+                -moz-column-break-inside: avoid;
+                -ms-column-break-inside: avoid;
+                -o-column-break-inside: avoid;
+            }
+            &.odd {
+                -webkit-column-count: 3;
+                -moz-column-count: 3;
+                column-count: 3;
+                 &.1-columns {
+                    -webkit-column-count: 1;
+                    -moz-column-count: 1;
+                    column-count: 1;
+                }
+                @media @tablet {
+                   -webkit-column-count: 1;
+                    -moz-column-count: 1;
+                    column-count: 1; 
+                }
+             }
             
             li {    /* menu-item and menu-section-item */
+                -webkit-column-break-inside: avoid;
+                -moz-column-break-inside: avoid;
+                -ms-column-break-inside: avoid;
+                -o-column-break-inside: avoid;
                 position: relative;
                 display: block;
                 padding-bottom: 1.5em;
@@ -454,6 +378,7 @@ header {
 
                 .inner-item {
                     display: inline-block;
+                    width: 100%;
 
                     h3 {    /* menu-item-name and menu-section-item-name */  
                         display: inline-block;
@@ -461,13 +386,15 @@ header {
                         margin: 0 0.2em 0.3em 0;
                     }
 
-                    img {   /* menu-item-image and menu-section-item-image */
-                        border: none;
-                        -webkit-border-radius: 5px;
-                        -moz-border-radius: 5px;
-                        border-radius: 5px;
-                        width: 100%;
-                        margin: 15px 0;
+                    .menu-item-image-wrap {
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        height: 180px;
+                        margin: 0.25em 0 0.75em;
+                        background-position: center;
+                        img {
+                            display: none;
+                        }
                     }
 
                     li {
@@ -533,15 +460,39 @@ header {
                                 background-position: center;
                                 display: inline-block;
                             }
-
-                            .vegetarian-icon {
-                                background-image: image('/images/v.png');
+                            .nutfree-icon, .vegetarian-icon, .glutenfree-icon, .dairyfree-icon, .spicy-icon, .medium-spicy-icon, .hot-icon   {
+                                &:before {
+                                    position: relative;
+                                    top: -2px;
+                                }  
                             }
-
-                            .glutenFree-icon {
-                                background-image: image('/images/gf.png');
+                            .not-spicy-icon.dietary-icon {
+                                    display: none;
                             }
-                        
+                            .medium-spicy-icon.dietary-icon {
+                                background-color: orange;
+                            }
+                            .medium-spicy-icon {
+                                &:before {
+                                    content: "ms";
+                                }
+                            }
+                            .hot-icon.dietary-icon {
+                                background-color: #860b14;
+                            }
+                            .hot-icon {
+                                &:before {
+                                    content: "s";
+                                }
+                            }
+                            .spicy-icon.dietary-icon {
+                                background-color: green;
+                            }
+                            .spicy-icon {
+                                &:before {
+                                    content: "ls";
+                                }
+                            }                
                     }   /* end menu-section-item-dietary-props */
 
                     h4 { margin-top: 15px; }
@@ -626,14 +577,6 @@ header {
                     background-position: center;
                 }
 
-                .vegetarian-icon {
-                    background-image: image('/images/veggie.png');
-                }
-
-                .glutenFree-icon {
-                    background-image: image('/images/nuts.png');
-                }
-
                 dd {    /* text for icon */
                     font-family:@font-swatch5-font-family;
                     font-size:@font-swatch5-font-size;
@@ -651,7 +594,7 @@ header {
 }   /* end main */
 
 /* ===============================
-   FOOTER
+   6. Footer
   =============================== */
 
 footer {
@@ -674,7 +617,7 @@ footer {
 }   /* end footer */ 
 
 /* ===============================
-  BACK TO TOP
+  7. Back to top
    =============================== */
 
 .back-to-top {
@@ -698,6 +641,10 @@ footer {
     margin: 0 auto;
   }
 }
+
+/* ===============================
+  8. Clearfix
+   =============================== */
 
 .clearfix:before,
 .clearfix:after {
