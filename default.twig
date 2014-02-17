@@ -2,314 +2,53 @@
 
 {% block content %}
 
-<a name="top"></a>
+<div class="bk-pt-default">
 
-<header>
+    {{widget('extendednavigation', 'navigationheader', {})|raw}}
+
+<header class="bk-header">
     <div class="wrapper clearfix">
-        <div class="header-img clearfix">
-            {{widget('image', 'companyimage', { 'src': asset('images/burger.png'), 'alt': 'my image', 'fileName': 'my-image.jpg', 'fileSize': '58kb', 'imageSize': '440 x 660', 'imageWidth': '150px'})|raw}}
+        <div class="header-img left clearfix">
+            {{widget('image', 'headercolumn1image', { 'src': asset('images/burger-image.png'), 'alt': 'my image', 'fileName': 'my-image.jpg', 'fileSize': '58kb', 'imageSize': '240 x 157', 'imageWidth': '240px'})|raw}}
         </div>
         <!--end header-img-->
         <div class="header-name clearfix">
-            {{widget('companyname', 'companyname', {"business": "Marlies"})|raw}}
-            {{widget('content', 'companystrapline', {content: '<h3>Burgers &amp; Shakes</h3>', lines: 'all'})|raw}}
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+            {{widget('content', 'companystrapline', {content: '<h3>Lorem Ipsum</h3>', lines: 'all'})|raw}}
         </div>
         <!--end header-company-name-->
-        <div class="header-img clearfix">
-            {{widget('image', 'companyimage2', { 'src': asset('images/shakes.png'), 'alt': 'my image', 'fileName': 'my-image.jpg', 'fileSize': '58kb', 'imageSize': '150px x 85px', 'imageWidth': '85px'})|raw}}
+        <div class="header-img right clearfix">
+            {{widget('image', 'headercolumn3image', { 'src': asset('images/shakes.png'), 'alt': 'my image', 'fileName': 'my-image.jpg', 'fileSize': '58kb', 'imageSize': '240px x 157px', 'imageWidth': '240px'})|raw}}
         </div>
         <!--end header-img-->
       </div>
     <!--end wrapper -->
-
-    <div class="wrapper">
-
-        <div class="desktop-nav">
-            <div class="navigation">
-                <ul>
-                    <li><a href="/snacks"><span class=" menu-icon"></span><span class="text">Snacks</span></a></li>
-                    <li><a href="/burgers"><span class=" menu-icon"></span><span class="text">Breakfast</span></a></li>
-                    <li><a href="/sides"><span class=" menu-icon"></span><span class="text">Salads</span></a></li>
-                    <li><a href="/fries"><span class=" menu-icon"></span><span class="text">Pasta</span></a></li>
-                    <li><a href="/chefs"><span class=" menu-icon"></span><span class="text">Burgers</span></a></li>
-                    <li><a href="/salads"><span class=" menu-icon"></span><span class="text">Paninies</span></a></li>
-                    <li><a href="/icecream"><span class=" menu-icon"></span><span class="text">Desserts</span></a></li>
-                    <li><a href="/hot-drinks"><span class=" menu-icon"></span><span class="text">Hot Drinks</span></a></li>
-                    <li><a href="/cold-drinks"><span class=" menu-icon"></span><span class="text">Cold Drinks</span></a></li>
-                </ul>
-                <a href="#" class="pull"></a>
-            </div>
-            <!--end navigation-->
-        </div>
-        <!--end desktop-nav-->
-
-    </div>
-    <!--end wrapper clearfix-->
 </header>
 
-<div class="top-nav">  
-    {{widget('extendednavigation', 'topnavigation', {})|raw}}
-</div>
-
-{% set menu = plugins.menu %}
-
 <div class="main wrapper clearfix">
-    <div class="menu-header">
-        <h1 class="menu-name">{{ menu.name }}</h1>
-        {% if menu.description is not null %}
-            <p class="menu-description">{{ menu.description }}</p>
-        {% endif %}
-        {% if menu.availability %}
-            <p class="menu-availability">{{ menu.availability }}</p>
-        {% endif %}
-    </div>
+    {{zone('main')|raw}}
+</div> 
 
-    {% if menu.items|length %}
-        <ol class="menu-items">
-            {% for item in menu.items %}
-                <li class="menu-item{% if item.promoted %} menu-item-promoted{% endif %}">
-                    <div class="inner-item">
-                        <h3 class="menu-item-name">{{ item.name }}</h3>
-                        <!--{% if item.imageURL is not null %}
-                            <img class="menu-item-image" alt="" src="{{ item.imageURL }}">
-                            {% endif %}-->
-                            <!--{% if item.nutritionalProperties|length %}
-                            <h4 class="menu-item-nutritional-title">Nutritional information</h4>
-                            <ul class="menu-item-nutritional-props">
-                                {% for prop in item.nutritionalProperties %}
-                                    <li class="menu-item-nutritional-prop"><p>{{ prop }}</p></li>
-                                {% endfor %}
-                            </ul>
-                            {% endif %}-->
-                            {% if item.description is not null %}
-                                <p class="menu-item-description">{{ item.description }}</p>
-                        {% endif %}
-                        {% if item.prices|length %}
-                            <ol class="menu-item-prices">
-                                {% for price in item.prices %}
-                                    <li class="menu-item-price">
-                                        {% if price.name == '' %}
-                                        <p class="standard-price">{{ price.price }}</p>
-                                        {% else %}
-                                        <p class="variant-price">{{ price.name }} {{ price.price }}</p>
-                                        {% endif %}
-                                    </li>
-                                {% endfor %}
-                                {% if item.dietaryInfo|length %}
-                                <div class="menu-section-item-dietary-props">
-                                    {% for key, value in item.dietaryInfo %}
-                                        {% if value == 1 %}
-                                        <span class="{{ key }}-icon dietary-icon"></span>
-                                        {% endif %}
-                                    {% endfor %}
-                                </div>
-                                {% endif %} 
-                            </ol>
-                            {% endif %}
-                    </div>
-                    <!--end inner-item-->
-                </li>
-            {% endfor %}
-        </ol>
-    {% endif %}
-    
-    {% if menu.sections|length %}
-            <ol class="menu-sections">
-                {% for section in menu.sections %}
-                <!-- BEGIN have two lis for styling as the data now just has one li -->
-                    <li class="menu-section sub-section-promoted">
-                        {% if section.parentRef is null %}
-                            <div class="menu-section-header">
-                                <div class="menu-section-background"><!-- Marta added this div to add background images to menu names -->
-                                    <h2 class="menu-section-name">{{ section.name }}</h2>
-                                </div>
-                                {% if section.availability is not null %}
-                                    <p class="menu-section-availability">{{ section.availability }}</p>
-                                {% endif %}
-                                {% if section.description is not null %}
-                                    <p class="menu-section-description">{{ section.description }}</p>
-                                {% endif %}
-                            </div>
-                        {% endif %}
-
-                        {% if section.sections|length %}
-                            <ol class="menu-sub-sections">
-                                {% include 'menu_subsection.twig' with {'sections': section.sections} %}
-                            </ol>
-                        {% endif %}
-
-                        {% if section.items|length %}
-                            <ol class="menu-section-items">
-                                {% for item in section.items %}
-                                    <li class="menu-section-item{% if item.promoted %} menu-item-promoted{% endif %}">
-                                        <div class="inner-item">
-                                        <h3 class="menu-section-item-name">{{ item.name }}</h3>
-
-                                        {% if item.imageURL is not null %}
-                                            <img class="menu-section-item-image" alt="" src="{{ item.imageURL }}">
-                                        {% endif %} 
-
-                                        {% if item.description is not null %}
-                                            <p class="menu-section-item-description">{{ item.description }}</p>
-                                        {% endif %}
-
-                                        {% if item.nutritionalProperties|length %}
-                                            <h4 class="menu-section-item-nutritional-title">Nutritional information</h4>
-                                            <ul class="menu-section-item-nutritional-props">
-                                                {% for prop in item.nutritionalProperties %}
-                                                    <li class="menu-section-item-nutritional-prop"><p>{{ prop }}</p></li>
-                                                {% endfor %}
-                                            </ul>
-                                        {% endif %}
-                                        
-                                        {% if item.prices|length %}
-                                            <ol class="menu-section-item-prices">
-                                                {% for price in item.prices %}
-                                                    <li class="menu-section-item-price">
-                                                        {% if price.name == '' %}
-                                                            <p class="standard-price">{{ price.price }}</p>
-                                                        {% else %}
-                                                            <p class="variant-price">{{ price.name }} {{ price.price }}</p>
-                                                        {% endif %}
-                                                    </li>
-                                                {% endfor %}
-                                            </ol>
-                                        {% endif %}
-                                        {% if item.dietaryInfo|length %}
-                                            <div class="menu-section-item-dietary-props">
-                                                {% for key, value in item.dietaryInfo %}
-                                                    {% if value == 1 %}
-                                                        <span class="{{ key }}-icon dietary-icon"></span>
-                                                    {% endif %}
-                                                {% endfor %}
-                                            </div>
-                                        {% endif %}
-                                    </div><!--end inner-item-->
-                                    </li>
-                                {% endfor %}
-                            </ol>
-                        {% endif %}
-                    </li>
-                <!-- END have two lis for styling as the data now just has one li -->
-                    <li class="menu-section">
-                        {% if section.parentRef is null %}
-                            <div class="menu-section-header">
-                                <div class="menu-section-background"><!-- Marta added this div to add background images to menu names -->
-                                    <h2 class="menu-section-name">{{ section.name }}</h2>
-                                </div>
-                                {% if section.availability is not null %}
-                                    <p class="menu-section-availability">{{ section.availability }}</p>
-                                {% endif %}
-                                {% if section.description is not null %}
-                                    <p class="menu-section-description">{{ section.description }}</p>
-                                {% endif %}
-                            </div>
-                        {% endif %}
-
-                        {% if section.sections|length %}
-                            <ol class="menu-sub-sections">
-                                {% include 'menu_subsection.twig' with {'sections': section.sections} %}
-                            </ol>
-                        {% endif %}
-
-                        {% if section.items|length %}
-                            <ol class="menu-section-items">
-                                {% for item in section.items %}
-                                    <li class="menu-section-item{% if item.promoted %} menu-item-promoted{% endif %}">
-                                        <div class="inner-item">
-                                        <h3 class="menu-section-item-name">{{ item.name }}</h3>
-                                        {% if item.prices|length %}
-                                            <ol class="menu-section-item-prices">
-                                                {% for price in item.prices %}
-                                                    <li class="menu-section-item-price">
-                                                        {% if price.name == '' %}
-                                                            <p class="standard-price">{{ price.price }}</p>
-                                                        {% else %}
-                                                            <p class="variant-price">{{ price.name }} {{ price.price }}</p>
-                                                        {% endif %}
-                                                    </li>
-                                                {% endfor %}
-                                            </ol>
-                                        {% endif %}
-
-                                        {% if item.imageURL is not null %}
-                                            <img class="menu-section-item-image" alt="" src="{{ item.imageURL }}">
-                                        {% endif %}
-
-                                        {% if item.description is not null %}
-                                            <p class="menu-section-item-description">{{ item.description }}</p>
-                                        {% endif %}
-
-                                        {% if item.nutritionalProperties|length %}
-                                            <h4 class="menu-section-item-nutritional-title">Nutritional information</h4>
-                                            <ul class="menu-section-item-nutritional-props">
-                                                {% for prop in item.nutritionalProperties %}
-                                                    <li class="menu-section-item-nutritional-prop"><p>{{ prop }}</p></li>
-                                                {% endfor %}
-                                            </ul>
-                                        {% endif %}
-
-                                        {% if item.dietaryInfo|length %}
-                                            <div class="menu-section-item-dietary-props">
-                                                {% for key, value in item.dietaryInfo %}
-                                                    {% if value == 1 %}
-                                                        <span class="{{ key }}-icon dietary-icon"></span>
-                                                    {% endif %}
-                                                {% endfor %}
-                                            </div>
-                                        {% endif %}
-                                    </div><!--end inner-item-->
-                                    </li>
-                                {% endfor %}
-                            </ol>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ol>
-        {% endif %}
-
-        {% if menu.note is not null %}
-
-        <div class="menu-info"><!-- Marta added this div -->
-            <p class="menu-note">{{ menu.note }}</p>
-        {% endif %}
-        {% if menu.dietaryInfoKeys|length %}
-            {% for key in menu.dietaryInfoKeys %}
-                {% if key == 'vegetarian' %}
-                    <dl class="menu-dietary-key">
-                        <dt class="vegetarian-icon dietary-icon"></dt>
-                        <dd>Suitable for vegetarians</dd>
-                    </dl>
-                {% elseif key == 'glutenFree' %}
-                    <dl class="menu-dietary-key">
-                        <dt class="glutenFree-icon dietary-icon"></dt>
-                        <dd>Gluten free</dd>
-                    </dl>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-    </div>    
-       
-</div>
-<!--end main wrapper clearfix-->
-
-<footer>
+<footer class="bk-footer">
     <div class="wrapper clearfix">
         <div class="responsivecolumns columns-three-33-34-33 offers">
             <div class="column columns-three-left">
-                {{widget('content', 'thisunqiuewidgetname', {content: '<h3>Find Us</h3>', lines: 'all'})|raw}}
-                {{widget('companyaddress', 'thisunqiuewidgetname', {})|raw}}
+                {{widget('content', 'footercolumn1content', {content: '<h3>Lorem Ipsum</h3>', lines: 'all'})|raw}}
+                {{widget('companyaddress', 'footercolumn1companyaddress', {})|raw}}
             </div> 
             <div class="column columns-three-middle">
-                {{widget('content', 'thisunqiuewidgetname', {content: '<h3>Contact Us</h3>', lines: 'all'})|raw}}
-                {{widget('content', 'thisunqiuewidgetname', {content: '<p>This is a content widget.</p>', lines: 'all'})|raw}}
+                {{widget('content', 'footercolumn2content', {content: '<h3>Lorem Ipsum</h3>', lines: 'all'})|raw}}
+                {{widget('content', 'footercolumn2content2', {content: '<p>This is a content widget.</p>', lines: 'all'})|raw}}
             </div>
             <div class="column columns-three-right">
-                {{widget('content', 'thisunqiuewidgetname', {content: '<h3>Opening Hours</h3>', lines: 'all'})|raw}}
-                {{widget('content', 'thisunqiuewidgetname', {content: '<p>This is a content widget.</p>', lines: 'all'})|raw}}
+                {{widget('content', 'footercolumn3content', {content: '<h3>Lorem Ipsum</h3>', lines: 'all'})|raw}}
+                {{widget('content', 'footercolumn3content2', {content: '<p>This is a content widget.</p>', lines: 'all'})|raw}}
             </div> 
         </div> 
     </div>
 </footer>
+
+</div>
 
 {% endblock %}

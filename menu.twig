@@ -2,50 +2,48 @@
 
 {% block content %}
 
-<a name="top"></a>
-
-<header>
+{% if pages|length > 1 %}
+{{widget('extendednavigation', 'navigationheader', {})|raw}}
+{% endif %}
+<header class="bk-header">
     <div class="wrapper clearfix">
-        <div class="header-img clearfix">
-            {{widget('image', 'companyimage', { 'src': asset('images/burger-image.png'), 'alt': 'my image', 'fileName': 'my-image.jpg', 'fileSize': '58kb', 'imageSize': '440 x 660', 'imageWidth': '150px'})|raw}}
+        <div class="header-img left clearfix">
+            {{widget('image', 'headercolumn1image', { 'src': asset('images/burger-image.png'), 'alt': 'my image', 'fileName': 'my-image.jpg', 'fileSize': '58kb', 'imageSize': '240 x 157', 'imageWidth': '240px'})|raw}}
         </div>
         <!--end header-img-->
         <div class="header-name clearfix">
-            {{widget('companyname', 'companyname', {"business": "MARLIES"})|raw}}
-            {{widget('content', 'companystrapline', {content: '<h3>Burgers &amp; Shakes</h3>', lines: 'all'})|raw}}
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+            {{widget('content', 'companystrapline', {content: '<h3>Lorem Ipsum</h3>', lines: 'all'})|raw}}
         </div>
         <!--end header-company-name-->
-        <div class="header-img clearfix">
-            {{widget('image', 'companyimage2', { 'src': asset('images/shakes.png'), 'alt': 'my image', 'fileName': 'my-image.jpg', 'fileSize': '58kb', 'imageSize': '150px x 85px', 'imageWidth': '85px'})|raw}}
+        <div class="header-img right clearfix">
+            {{widget('image', 'headercolumn3image', { 'src': asset('images/shakes.png'), 'alt': 'my image', 'fileName': 'my-image.jpg', 'fileSize': '58kb', 'imageSize': '240px x 157px', 'imageWidth': '240px'})|raw}}
         </div>
         <!--end header-img-->
       </div>
     <!--end wrapper -->
-
-    {{widget('menusections', 'menusections1', {})|raw}}
-    
 </header>
 
 <div class="main wrapper">
-
+    {{widget('menusections', 'menusections1', {})|raw}}
     {{widget('menu', 'menu1', {})|raw}}
-
 </div>
 
-<footer>
+<footer class="bk-footer">
     <div class="wrapper clearfix">
         <div class="responsivecolumns columns-three-33-34-33 offers">
             <div class="column columns-three-left">
-                {{widget('content', 'company-address', {content: '<h3>Find Us</h3>', lines: 'all'})|raw}}
-                {{widget('companyaddress', 'thisunqiuewidgetname', {})|raw}}
+                {{widget('content', 'footercolumn1content', {content: '<h3>Lorem Ipsum</h3>', lines: 'all'})|raw}}
+                {{widget('companyaddress', 'footercolumn1companyaddress', {})|raw}}
             </div> 
             <div class="column columns-three-middle">
-                {{widget('content', 'contactheadline', {content: '<h3>Contact Us</h3>', lines: 'all'})|raw}}
-                {{widget('content', 'contactcontent', {content: '<p>This is a content widget.</p>', lines: 'all'})|raw}}
+                {{widget('content', 'footercolumn2content', {content: '<h3>Lorem Ipsum</h3>', lines: 'all'})|raw}}
+                {{widget('content', 'footercolumn2content2', {content: '<p>This is a content widget.</p>', lines: 'all'})|raw}}
             </div>
             <div class="column columns-three-right">
-                {{widget('content', 'openheading', {content: '<h3>Opening Hours</h3>', lines: 'all'})|raw}}
-                {{widget('content', 'opencontent', {content: '<p>This is a content widget.</p>', lines: 'all'})|raw}}
+                {{widget('content', 'footercolumn3content', {content: '<h3>Lorem Ipsum</h3>', lines: 'all'})|raw}}
+                {{widget('content', 'footercolumn3content2', {content: '<p>This is a content widget.</p>', lines: 'all'})|raw}}
             </div> 
         </div> 
     </div>
