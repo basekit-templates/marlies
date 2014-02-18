@@ -701,6 +701,21 @@ body {
             }   /* end li */
         }   /* end menu-items */  
 
+        .menu-subsection .menu-subsection-promoted { /* PROMOTED SUB-SECTION */ 
+                border: 2px dotted @color-swatch4;
+                background: fade(@color-swatch7, 30%); 
+                padding: 0 2em 2em;
+                margin: 2em 0 1em;
+                position: relative;
+                @media @mobile {
+                    padding: 0 2em 0;
+                }
+                .menu-subsection-header {
+                    margin: 20px 0;
+                    padding: 2em 0 0.2em;
+                }
+            } /* end PROMOTED SUB-SECTION */
+
         .menu-info {
             display: block;
             text-align: center;
