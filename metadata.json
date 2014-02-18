@@ -59,7 +59,7 @@
        "title": "\"Oswald\", Arial, sans-serif",
         "font1": {
             "font-family": "\"Oswald\", Arial, sans-serif",
-            "font-size": "28px",
+            "font-size": "30px",
             "font-weight": "400",
             "line-height": "32px",
             "color": "@color-swatch4",
@@ -67,7 +67,7 @@
         },
         "font2": {
             "font-family": "\"Oswald\", Arial, sans-serif",
-            "font-size": "24px",
+            "font-size": "28px",
             "font-weight": "400",
             "line-height": "34px",
             "color": "@color-swatch5",

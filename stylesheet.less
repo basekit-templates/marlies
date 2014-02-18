@@ -249,9 +249,9 @@ body {
         float: left;
         width: 100%;
         background-color: @color-swatch1;
-        margin: 4em 0 2em;
+        margin: 4.5em 0 2.5em;
         @media @tablet {
-            margin: 0em auto 2em;
+            margin: 2em auto;
         }
     .header-img {
         display: inline-block;
@@ -370,11 +370,15 @@ body {
                 }
                 &:first-child {
                     padding: 0 12px 0 0;
+                    @media @tablet {
+                        padding: 1em 0;
+                    }
                 }
                 &:last-child {
                     padding: 0 0 0 12px;
                    @media @tablet {
                         border-bottom: 1px dotted @color-swatch6;
+                        padding: 1em 0;
                    }
                 }
                 a {
@@ -475,13 +479,17 @@ body {
                 padding: 3em 0 1em;
             }
 
+            @media @mobile {
+                padding: 0 0 1em;
+            }
+
             h1, h2 {    /* menu-name menu-section-name */
                 text-align: center;
                 text-shadow: 1px 2px 0px @color-swatch1, 3px 4px 0px fade(@color-swatch4, 15%);
                 overflow: hidden; 
                     &:before, &:after {
                         border-top: 2px solid @color-swatch4;
-                        border-bottom: 3px solid @color-swatch4;
+                        border-bottom: 2px solid @color-swatch4;
                         content: "";
                         display: inline-block;
                         height: .1em;
