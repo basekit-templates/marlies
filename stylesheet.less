@@ -245,6 +245,17 @@ body {
    Header
    =============================== */
 
+body.edit { /* border for logo on editor */
+    .widget {
+        &.logo {
+            img {
+                border: 1px dashed red;
+                margin: 0 0 30px;
+            }
+        }
+    }
+}
+
 .bk-header {
         width: 100%;
         background-color: @color-swatch1;
@@ -295,28 +306,28 @@ body {
             border: none;
             box-shadow: none;
         }
-            a {
-                font-family: @font-swatch10-font-family;
-                font-weight: @font-swatch10-font-weight;
-                color: @font-swatch10-color;
-                line-height: @font-swatch10-line-height;
-                letter-spacing: @font-swatch10-letter-spacing;
-                font-size: @font-swatch10-font-size;
-                margin: 2em 0;
-                text-decoration: none;
-            } 
-            h3 {
-                padding: 1em 0;
-                text-align: center;
-                    &:before, &:after {
-                        content: "\2605";
-                        display: inline-block;
-                        height: 25px;
-                        width: 25px;
-                        margin: 0 10px;
-                        position: relative;  
-                    }
-            }
+        a {
+            font-family: @font-swatch10-font-family;
+            font-weight: @font-swatch10-font-weight;
+            color: @font-swatch10-color;
+            line-height: @font-swatch10-line-height;
+            letter-spacing: @font-swatch10-letter-spacing;
+            font-size: @font-swatch10-font-size;
+            margin: 2em 0;
+            text-decoration: none;
+        } 
+        h3 {
+            padding: 1em 0;
+            text-align: center;
+                &:before, &:after {
+                    content: "\2605";
+                    display: inline-block;
+                    height: 25px;
+                    width: 25px;
+                    margin: 0 10px;
+                    position: relative;  
+                }
+        }
     }   /* end header-name */
 
     .widget.companyname {
