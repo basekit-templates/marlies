@@ -26,7 +26,9 @@
 </header>
 
 <div class="main wrapper">
-    {{widget('menusections', 'menusections1', {})|raw}}
+    <div class="clearfix">
+        {{widget('menusections', 'menusections1', {})|raw}}
+    </div>
     {{widget('menu', 'menu1', {})|raw}}
 </div>
 
@@ -39,11 +41,11 @@
             </div> 
             <div class="column columns-three-middle">
                 {{widget('content', 'footercolumn2content', {content: '<h3>Lorem Ipsum</h3>', lines: 'all'})|raw}}
-                {{widget('content', 'footercolumn2content2', {content: '<p>This is a content widget.</p>', lines: 'all'})|raw}}
+                {{widget('content', 'footercolumn2content2', {content: '<p>.</p>', lines: 'all'})|raw}}
             </div>
             <div class="column columns-three-right">
                 {{widget('content', 'footercolumn3content', {content: '<h3>Lorem Ipsum</h3>', lines: 'all'})|raw}}
-                {{widget('content', 'footercolumn3content2', {content: '<p>This is a content widget.</p>', lines: 'all'})|raw}}
+                {{widget('content', 'footercolumn3content2', {content: '<p></p>', lines: 'all'})|raw}}
             </div> 
         </div> 
     </div>
