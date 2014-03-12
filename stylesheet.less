@@ -12,6 +12,17 @@ body {
   padding: 0;
 }
 
+body.edit { /* border for logo on editor */
+    .widget {
+        &.logo {
+            img {
+                border: 1px dashed red;
+                margin: 0 0 30px;
+            }
+        }
+    }
+ }
+
 .wrapper {
     width: 90%;
     margin: 0 5%;
@@ -264,9 +275,6 @@ body {
         }
         @media @tablet {
             display: none;
-        }
-        .widget span img {
-            width: 100%; 
         }
     }   /* end header-img */
 
