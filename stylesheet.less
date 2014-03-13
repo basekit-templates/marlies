@@ -1005,3 +1005,61 @@ width: 100%;
 .clearfix {
   *zoom: 1;
 }
+
+/* ===============================
+   9. Print override
+   =============================== */
+.print-mixin {
+    .headerrow,
+    .bk-footer,
+    .bk-header .widget.profile  {
+        display:none;
+    }
+    .companyheader {
+        padding:0px;
+    }
+    .menu-container {
+        display:none;
+    }
+    .menu-info {
+        margin:0px;
+    }
+    .widget.menu .main.wrapper {
+        page-break-before:always;
+    }
+    .widget.menu .menu-item-image-wrap {
+        height:150px;
+    }
+    .widget.menu .main .menu-items li.menu-item-promoted, .widget.menu .main .menu-subsection .menu-subsection-promoted {
+        border:1px solid black!important;
+    }
+    .companyheader {
+      margin-top:0;
+    }
+    .menu-header, .menu-section-header {
+      padding-bottom:0;
+      margin-bottom:0;
+    }
+    .widget.menu .menu-section-item-dietary-props .dietary-icon, .widget.menu .menu-info .dietary-icon {
+      border: 1px solid #000000!important;
+  }
+  .widget.content .bk-content-text {
+    margin: 0px auto;
+    display: table;
+  }
+  .menu-subsection-header {
+    text-align:center;
+  }
+  .menu-subsection-wrapper.menu-subsection-promoted {
+    padding:20px;
+  }
+}
+
+
+@media print {
+    .print-mixin;
+}
+
+.bk-print {
+    .print-mixin;
+}
