@@ -40,7 +40,7 @@ body.edit { /* border for logo on editor */
 .bk-pt-default .bk-header {
     margin: 4em 0;
     @media @tablet {
-        margin: 2em;
+        margin: 2em 0;
     }
 }
 
@@ -349,21 +349,14 @@ body.edit { /* border for logo on editor */
         text-align: center;
         width: 100%;
         @media @tablet {
-            margin: 0 auto 1em;
+            border-top: 1px dotted @color-swatch6;
+            margin: 1em auto 0;
         }
         ul {
             display: inline-block;
             list-style: none;
             margin-bottom: 0;
             padding: 0.5em 0;
-            @media @tablet {
-                /* Hidden until nav icon is clicked */
-                display: none;
-                /* Then these styles are applied */
-                width: 100%;
-                margin: 20px 0;
-                background-color: @color-swatch1;
-            }
             li {
                 padding: 0 12px;
                 margin: 0;
@@ -372,7 +365,6 @@ body.edit { /* border for logo on editor */
                     width: 100%;
                     padding: 1em 0;
                     margin: 0;
-                    border-bottom: 1px dotted lighten(@color-swatch6,50%);
                 }
                 &:first-child {
                     padding: 0 12px 0 0;
@@ -383,7 +375,6 @@ body.edit { /* border for logo on editor */
                 &:last-child {
                     padding: 0 0 0 12px;
                    @media @tablet {
-                        border-bottom: 1px dotted @color-swatch6;
                         padding: 1em 0;
                    }
                 }
@@ -410,34 +401,6 @@ body.edit { /* border for logo on editor */
                 }
                 &:last-child a:after {
                     content: "";
-                }
-            }
-        }
-        a.menu-pull {
-            display: none;
-            @media @tablet {
-                display: block;
-                position: absolute;
-                width: 100%;
-                border-bottom: 1px dotted @color-swatch5;
-                top: 0;
-                &:after {
-                    content:"";
-                    background: image('/images/nav-icon.png') no-repeat;
-                    background-position: center;
-                    width: 50px;
-                    height: 50px;
-                    top: -28px;
-                    right: 0;
-                    left: 0;
-                    margin: 0 auto;
-                    background-color: @color-swatch5;
-                    display: inline-block;
-                    position: absolute;
-                    border: none;
-                    -webkit-border-radius: 100px;
-                    -moz-border-radius: 100px;
-                    border-radius: 100px;
                 }
             }
         }
