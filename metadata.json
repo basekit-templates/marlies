@@ -2,6 +2,7 @@
     "name":"Marlies",
     "thumbnail":"marlies.png",
     "screenshot":"marlies.png",
+    "templateType":"menu",
     "tags": {
     "en": ["menu", "cafe", "bar", "restaurant"],
     "es": ["menú", "cafetería", "bar", "restaurante"],
